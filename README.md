@@ -1,8 +1,8 @@
 # kickstart.nvim
 
-https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4fa-8a0d7b17cf7b
+<https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4fa-8a0d7b17cf7b>
 
-### Introduction
+## Introduction
 
 A starting point for Neovim that is:
 
@@ -16,17 +16,19 @@ This repo is meant to be used by **YOU** to begin your Neovim journey; remove th
 Kickstart.nvim targets *only* the latest ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest ['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim. If you are experiencing issues, please make sure you have the latest versions.
 
 Distribution Alternatives:
-- [LazyVim](https://www.lazyvim.org/): A delightful distribution maintained by @folke (the author of lazy.nvim, the package manager used here)
+
+* [LazyVim](https://www.lazyvim.org/): A delightful distribution maintained by @folke (the author of lazy.nvim, the package manager used here)
 
 ### Installation
 
-> **NOTE** 
-> [Backup](#FAQ) your previous configuration (if any exists)
+> **NOTE**
+> [Backup](#faq) your previous configuration (if any exists)
 
 Requirements:
+
 * Make sure to review the readmes of the plugins if you are experiencing errors. In particular:
   * [ripgrep](https://github.com/BurntSushi/ripgrep#installation) is required for multiple [telescope](https://github.com/nvim-telescope/telescope.nvim#suggested-dependencies) pickers.
-* See [Windows Installation](#Windows-Installation) if you have trouble with `telescope-fzf-native`
+* See [Windows Installation](#windows-installation) if you have trouble with `telescope-fzf-native`
 
 Neovim's configurations are located under the following paths, depending on your OS:
 
@@ -43,8 +45,7 @@ Clone kickstart.nvim:
 git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
-
-```
+```powershell
 # on Windows
 git clone https://github.com/nvim-lua/kickstart.nvim.git %userprofile%\AppData\Local\nvim\ 
 ```
@@ -98,7 +99,6 @@ return {
   end,
 }
 ```
-
 
 This will automatically install [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) and enable it on startup. For more information, see documentation for [lazy.nvim](https://github.com/folke/lazy.nvim).
 
@@ -155,9 +155,8 @@ See `telescope-fzf-native` documentation for [more details](https://github.com/n
 
 This requires:
 
-- Install CMake, and the Microsoft C++ Build Tools on Windows
+* Install CMake, and the Microsoft C++ Build Tools on Windows
 
 ```lua
 {'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 ```
-
